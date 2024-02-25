@@ -1,4 +1,4 @@
-Daily tech wave a news platform made using reactjs and news api which can be used to view the today top news daily
+<h1>Daily tech wave a news platform made using reactjs and news api which can be used to view the today top news daily</h1>
  
  Author - Arunmozhi varman
  contact - amv.k.2712005@gmail.com
