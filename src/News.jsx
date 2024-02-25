@@ -3,16 +3,15 @@ import React, { useState, useEffect } from 'react';
 function News() {
     const [news, setNews] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [language, setLanguage] = useState('en');
     const [category, setCategory] = useState('technology');
     const [country, setCountry] = useState('us');
     const [apiLimitReached, setApiLimitReached] = useState(false);
 
     useEffect(() => {
-        let apiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=0d389ce52ffd4c4f9f73cd5d2d907c52`;
+        let apiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=<YOUR_NEWS_API>`;
 
         if (searchTerm) {
-            apiUrl = `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=0d389ce52ffd4c4f9f73cd5d2d907c52`;
+            apiUrl = `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=<YOUR_NEWS_API>`;
         }
 
         fetch(apiUrl)
@@ -31,10 +30,6 @@ function News() {
 
     const handleSearchInputChange = (event) => {
         setSearchTerm(event.target.value);
-    };
-
-    const handleLanguageChange = (event) => {
-        setLanguage(event.target.value);
     };
 
     const handleCategoryChange = (event) => {
@@ -57,11 +52,6 @@ function News() {
             <br />
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-wrap justify-center">
                 <input type="text" value={searchTerm} onChange={handleSearchInputChange} placeholder="Enter search term" className="border m-2 border-gray-300 px-4 py-2 rounded-md mr-2" />
-                {/* <select value={language} onChange={handleLanguageChange} className="border border-gray-300 px-4 py-2 rounded-md mr-2 m-2">
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                    <option value="fr">French</option>
-                </select> */}
                 <select value={country} onChange={handleCountryChange} className="border border-gray-300 px-4 py-2 rounded-md mr-2 m-2">
                     <option value="us">United States</option>
                     <option value="in">India</option>
