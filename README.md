@@ -1,5 +1,4 @@
-![Screenshot (3)](https://github.com/AMV0027/reactjs-news_api/assets/129928410/24fb4ed6-edff-49ad-bcd8-c8a74e8525c2)# reactjs-news_api
- Daily tech wave a news platform made using reactjs and news api which can be used to view the today top news daily
+Daily tech wave a news platform made using reactjs and news api which can be used to view the today top news daily
  
  Author - Arunmozhi varman
  contact - amv.k.2712005@gmail.com
